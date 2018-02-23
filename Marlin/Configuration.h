@@ -536,7 +536,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 95 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 380 }  mine, not works
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 230 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 95 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -573,8 +573,8 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 20.0
-#define DEFAULT_YJERK                 20.0
+#define DEFAULT_XJERK                 7.0
+#define DEFAULT_YJERK                 7.0
 #define DEFAULT_ZJERK                  0.3
 #define DEFAULT_EJERK                  5.0
 
@@ -690,9 +690,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER -12   // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -39   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 0   // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.85   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 6000
@@ -797,7 +797,7 @@
 #define Z_MAX_POS 240
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
-#define MIN_SOFTWARE_ENDSTOPS
+//#define MIN_SOFTWARE_ENDSTOPS
 // If enabled, axes won't move above MAX_POS in response to movement commands.
 #define MAX_SOFTWARE_ENDSTOPS
 
